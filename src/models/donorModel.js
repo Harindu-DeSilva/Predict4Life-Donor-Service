@@ -8,6 +8,8 @@ const donorSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
   address: { type: String, required: true },
   last_donation_date: { type: Date, default: null },
+  latitude: { type: Number, required: true },  
+  longitude: { type: Number, required: true },  
 });
 
 const Donor = mongoose.model("Donor", donorSchema);
